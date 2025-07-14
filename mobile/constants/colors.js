@@ -1,17 +1,17 @@
 // FOREST
-const COLORS = {
-  primary: "#4CAF50",
-  textPrimary: "#2e5a2e",
-  textSecondary: "#688f68",
-  textDark: "#1b361b",
-  placeholderText: "#767676",
-  background: "#e8f5e9",
-  cardBackground: "#f1f8f2",
-  inputBackground: "#f4faf5",
-  border: "#c8e6c9",
-  white: "#ffffff",
-  black: "#000000",
-};
+// const COLORS = {
+//   primary: "#4CAF50",
+//   textPrimary: "#2e5a2e",
+//   textSecondary: "#688f68",
+//   textDark: "#1b361b",
+//   placeholderText: "#767676",
+//   background: "#e8f5e9",
+//   cardBackground: "#f1f8f2",
+//   inputBackground: "#f4faf5",
+//   border: "#c8e6c9",
+//   white: "#ffffff",
+//   black: "#000000",
+// };
 
 // RETRO
 /*
@@ -63,5 +63,35 @@ const COLORS = {
   black: "#000000",
 };
 */
+
+// MIDNIGHT
+// const COLORS = {
+//   primary: "#FFD700",
+//   textPrimary: "#f5f5f5",
+//   textSecondary: "#cccccc",
+//   textDark: "#ffffff",
+//   placeholderText: "#888888",
+//   background: "#1a1a1a",
+//   cardBackground: "#2d2d2d",
+//   inputBackground: "#333333",
+//   border: "#404040",
+//   white: "#ffffff",
+//   black: "#000000",
+// };
+
+// AURORA
+const COLORS = {
+  primary: "#9C27B0",
+  textPrimary: "#4a148c",
+  textSecondary: "#7b1fa2",
+  textDark: "#2e0854",
+  placeholderText: "#767676",
+  background: "linear-gradient(135deg, #f3e5f5 0%, #e8eaf6 100%)",
+  cardBackground: "#fafafa",
+  inputBackground: "linear-gradient(135deg, #f8f9fa 0%, #f3e5f5 100%)",
+  border: "#ce93d8",
+  white: "#ffffff",
+  black: "#000000",
+};
 
 export default COLORS;

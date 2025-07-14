@@ -1,1 +1,1 @@
-export const API_URL = "book-management-three-gamma.vercel.app";
+export const API_URL = "http://localhost:3000/api";

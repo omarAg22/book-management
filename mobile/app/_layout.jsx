@@ -5,7 +5,7 @@ import { StatusBar } from "expo-status-bar";
 import { useFonts } from "expo-font";
 
 import { useAuthStore } from "../store/authStore";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 SplashScreen.preventAutoHideAsync();
 
@@ -19,22 +19,31 @@ export default function RootLayout() {
     "JetBrainsMono-Medium": require("../assets/fonts/JetBrainsMono-Medium.ttf"),
   });
 
+  const [layoutReady, setLayoutReady] = useState(false);
+
   useEffect(() => {
-    if (fontsLoaded) SplashScreen.hideAsync();
+    if (fontsLoaded) {
+      SplashScreen.hideAsync();
+      setLayoutReady(true);
+    }
   }, [fontsLoaded]);
 
   useEffect(() => {
     checkAuth();
   }, []);
 
-  // handle navigation based on the auth state
   useEffect(() => {
+    if (!layoutReady) return;
+
     const inAuthScreen = segments[0] === "(auth)";
     const isSignedIn = user && token;
 
-    if (!isSignedIn && !inAuthScreen) router.replace("/(auth)");
-    else if (isSignedIn && inAuthScreen) router.replace("/(tabs)");
-  }, [user, token, segments]);
+    if (!isSignedIn && !inAuthScreen) {
+      router.replace("/(auth)");
+    } else if (isSignedIn && inAuthScreen) {
+      router.replace("/(tabs)");
+    }
+  }, [user, token, segments, layoutReady]);
 
   return (
     <SafeAreaProvider>
